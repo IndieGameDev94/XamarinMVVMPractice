@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MVVMPractice" xmlns:viewModels="clr-namespace:MVVMPractice.ViewModels;assembly=MVVMPractice" x:Class="MVVMPractice.MVVMPracticePage">
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Orientation="Vertical">
+        <Label Text="Welcome to Xamarin MVVM!" TextColor="Black" FontSize="40" />
+        <Entry FontSize="40" Text="{Binding Name}" Placeholder="Your Name">
+        </Entry>
+        <Button Text="Say Hello" FontSize="40" Command="{Binding SayHelloCOmmand}" TextColor="Black">
+        </Button>
+        <Label FontSize="40" Text="{Binding HelloMessage }" TextColor="Black">
+        </Label>
+    </StackLayout>
+</ContentPage>
